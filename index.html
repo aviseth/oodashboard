@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="/index.js"></script>
+    </head>
+    <body>
+        <div class="container light-text">
+            <h1>Dashboard</h1>
+            <hr class="h-line">
+            <div class="row-standard">
+                <div class="column-standard flex-center-col">
+                    <section class="section-card">
+                        <h3>
+                            Runs on Promethion
+                        </h3>
+                        <div class="file-box">
+                            <select
+                                id="promethion-files"
+                                size="5"
+                                multiple
+                                class="file-selector"
+                            >
+                                <option value="/var/log/promethion.log">
+                                    /var/log/promethion.log
+                                </option>
+                                <option value="/var/log/test.log">
+                                    /var/log/test.log
+                                </option>
+                            </select>
+                        </div>
+                    </section>
+                    <section class="section-card">
+                        <h3>
+                            Runs on Maxam
+                        </h3>
+                        <div class="file-box">
+                            <select
+                                id="maxam-files"
+                                size="5"
+                                multiple
+                                class="file-selector"
+                            >
+                                <option value="/var/log/maxam.log">
+                                    /var/log/maxam.log
+                                </option>
+                                <option value="/var/log/test.log">
+                                    /var/log/test.log
+                                </option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="column-standard flex-center-col">
+                    <div>
+                        <section class="section-card">
+                            <h3>
+                                Distribute data
+                            </h3>
+                            <!-- Input -->
+                            <h4 class="no-btm-pad">
+                                Destination
+                            </h4>
+                            <input type="checkbox" id="pickup" name="pickup" value="pickup">
+                            <label for="pickup"> pickup</label>
+                            <br>
+
+                            <input type="checkbox" id="gscdata" name="gscdata" value="gscdata">
+                            <label for="gscdata"> gscdata</label>
+                            <br>
+
+                            <input type="checkbox" id="archive" name="archive" value="archive">
+                            <label for="archive"> archive</label>
+                            <br>
+
+                            <input type="checkbox" id="pi_folder" name="pi_folder" value="pi_folder">
+                            <label for="pi_folder"> pi_folder</label>
+                            <br>
+                        </section>
+                        <section class="section-card">
+                            <h3>
+                                Available project folders
+                            </h3>
+                            <div class="file-box">
+                                <select
+                                    id="project-folders"
+                                    size="5"
+                                    multiple
+                                    class="file-selector"
+                                >
+                                    <option value="gscdata">
+                                        gscdata
+                                    </option>
+                                    <option value="rsetting_lab">
+                                        rsetting_lab
+                                    </option>
+                                </select>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="column-standard flex-center-col flex-col-h-between">
+                    <section class="section-card-less">
+                        <h3>
+                            Run Process
+                        </h3>
+                        <button>
+                            Begin Workflow
+                        </button>
+                    </section>
+                    <section class="section-card-less">
+                        <div id="result-box" class="progress-box">
+                            Progress box where we have data
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="waves">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+            >
+                <path
+                    fill="#ff5500"
+                    fill-opacity="0.5"
+                    d="M0,128L21.8,117.3C43.6,107,87,85,131,74.7C174.5,64,218,64,262,101.3C305.5,139,349,213,393,218.7C436.4,224,480,160,524,138.7C567.3,117,611,139,655,170.7C698.2,203,742,245,785,250.7C829.1,256,873,224,916,224C960,224,1004,256,1047,250.7C1090.9,245,1135,203,1178,170.7C1221.8,139,1265,117,1309,117.3C1352.7,117,1396,139,1418,149.3L1440,160L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
+                ></path>
+            </svg>
+        </div>
+    </body>
+</html>

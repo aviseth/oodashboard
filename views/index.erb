@@ -106,23 +106,14 @@
                         <h3>
                             Run Process
                         </h3>
-                        <form action="theSamePage.php" method="post">
-                        <input type="submit" name="someAction" value="GO" />
+                        <form action="script.php" method="post">
+                        <input type="submit" name="someAction" value="Begin workflow" />
                         </form>
-                        <?php
-                        if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
-                        {
-                            func();
-                        }
-                        function func()
-                        {
-                            shell_exec(".sh");   
-                        }
-                        ?>
-                        #<button>
-                        #    Begin Workflow
-                        #    <?php shell_exec("yourscript.sh"); ?>
-                        #</button>
+                       
+                       =begin  <button>
+                            Begin Workflow
+                            <?php shell_exec("yourscript.sh"); ?>
+                        </button> =end
                     </section>
                     <section class="section-card-less">
                         <div id="result-box" class="progress-box">
